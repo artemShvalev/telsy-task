@@ -6,8 +6,8 @@
         <input type="text" v-model="firstName" placeholder=" имя"/><br>
         <label>Фамилия</label>
         <input type="text" v-model="lastName" placeholder=" фамилия"/><br>
-        <label>Возраст</label>
-        <input type="number" v-model="age" min="18" required placeholder=" возраст"/><br>
+        <label>ID</label>
+        <input type="number" v-model="age" min="18" required placeholder=" ID"/><br>
         <label>Дата регистрации</label><br>
         <input type="date" v-model="date" placeholder="дата"/>
         <button  class="btn" @click="addUser()">
