@@ -7,12 +7,13 @@
         <label>Фамилия</label>
         <input type="text" v-model="lastName" placeholder=" фамилия"/><br>
         <label>ID</label>
-        <input type="number" v-model="age" min="18" required placeholder=" ID"/><br>
-        <label>Дата регистрации</label><br>
-        <input type="date" v-model="date" placeholder="дата"/>
-        <button  class="btn" @click="addUser()">
+        <input type="number" v-model="id" min="18" required placeholder=" ID"/><br>
+        <button  class="btn"  name="my-first-modal"  @click="showModal=true">
           Добавить пользователя
         </button>
+        <Modal v-model="showModal" title="My first modal">
+          <p>Modal content goes here...</p>
+        </Modal>
       </div>
     </div>
   </div>
@@ -23,19 +24,11 @@ export default {
   name: 'EnterUsers',
   data() {
     return {
+      showModal: false,
       firstName: '',
       lastName: '',
-      age: '',
-      date: '',
+      id: '',
     };
-  },
-  methods: {
-    addUser(firstName, lastName, age, date) {
-      firstName = this.addUser;
-      lastName = this.addUser;
-      age = this.addUser;
-      date = this.addUser;
-    },
   },
 };
 </script>
