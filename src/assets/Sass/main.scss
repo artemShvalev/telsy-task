@@ -17,11 +17,13 @@ ul>li{
   font-family: $font;
   font-weight: $weight;
   position: relative;
+  top: 100px;
 }
 .btn{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap:wrap;
 
   font-family: $font;
   font-weight: $weight;
@@ -31,12 +33,17 @@ ul>li{
   max-height: 300px;
   padding:10px;
   position: absolute;
-  top: 180px;
+  top: 100px;
 
 
   background: transparent;
   color: #424141;
   border: 1px #274206 solid;
   outline: none;
-
+}
+.btn:hover {
+  transform: translateY(-3px,3px);
+  box-shadow: 0 5px 25px rgb(193, 196, 232);
+  background-color: rgba(245, 245, 245, 0.57);
+  cursor:pointer;
 }
