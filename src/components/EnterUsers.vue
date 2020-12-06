@@ -6,22 +6,24 @@
       <li>Фамилия: {{ users.lastName }}</li>
       <li>ID: {{ users.id }}</li>
     </ul>
-        <button  class="btn"  name="my-first-modal"  @click="showModal=true">
+        <button  class="btn"  name="my-first-modal"  @click.prevent="showModal=true">
           Добавить пользователя
         </button>
     </div>
-        <Modal v-model="showModal" title="Добавление нового пользователя">
+        <Modal v-model="showModal" modal-class="modal" title="Добавление нового пользователя">
           <div class="container">
             <div id="app" class="form">
               <label>Имя</label>
-              <input type="text" v-model="user.firstName" placeholder=" имя"/>
+              <input type="text" v-model="user.firstName" placeholder="Введите имя"/>
               <label>Фамилия</label>
-              <input type="text" v-model="user.lastName" placeholder=" фамилия"/>
+              <input type="text" v-model="user.lastName" placeholder="Введите фамилию"/>
               <label>ID</label>
-              <input type="number" v-model="user.id" min="18" required placeholder=" ID"/>
+              <input type="number" v-model="user.id" min="18" required placeholder="Введите ID"/>
               </div>
             </div>
-          <button @click.prevent="addUser">Добавить нового пользователя</button>
+          <button  class="btn__add-user" @click.prevent="addUser">
+            Добавить нового пользователя
+          </button>
         </Modal>
       </div>
 </template>

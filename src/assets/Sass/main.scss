@@ -6,6 +6,7 @@
 }
 body{
   background-color: darken(#eeeeee, 3%);
+  font-family:$font;
 }
 ul>li{
   list-style: none;
@@ -23,7 +24,6 @@ ul>li{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap:wrap;
 
   font-family: $font;
   font-weight: $weight;
@@ -37,13 +37,82 @@ ul>li{
 
 
   background: transparent;
-  color: #424141;
-  border: 1px #274206 solid;
+  color: rgb(98, 94, 94);
+  border: 1px #0044ff solid;
+  border-radius:5px;
   outline: none;
 }
 .btn:hover {
-  transform: translateY(-3px,3px);
-  box-shadow: 0 5px 25px rgb(193, 196, 232);
-  background-color: rgba(245, 245, 245, 0.57);
+  transform: translateY(-3px, 10px);
+  box-shadow: 0 5px 20px #4b8dc9;
+  background-color: rgba(232, 232, 232, 0.91);
   cursor:pointer;
+  transition: box-shadow .2s ;
+  color: #4b8dc9;
+  font-weight:700;
 }
+
+/*Модальное окно*/
+
+.modal{
+  background-color: #fcfafa;
+  margin-top: 100px;
+  border-radius:5px ;
+}
+
+.form > label{
+  font-family: $font;
+  font-weight: $weight;
+  font-size: 16px;
+}
+
+input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 450px;
+  height: 60px;
+  margin-top: 20px;
+
+  border-radius: 5px;
+  border: 1px solid #eeeeee;
+  outline: none;
+}
+
+input:focus{
+  background: transparent;
+  border-left: 1px solid dodgerblue;
+}
+
+.btn__add-user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row;
+
+  font-family: $font;
+
+  max-width: 300px;
+  max-height: 300px;
+  padding:10px;
+  margin: 20px 20px;
+  position: relative;
+  left: 80px;
+
+  background: transparent;
+  color: #160a0a;
+  border: .4px dodgerblue solid;
+  outline: none;
+  border-radius:5px;
+  font-weight:600;
+}
+
+.btn__add-user:hover{
+  color: #ff0000;
+  font-weight:700;
+  cursor: pointer;
+  transition: color .5s ;
+}
+
+
