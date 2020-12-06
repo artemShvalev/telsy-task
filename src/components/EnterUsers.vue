@@ -62,5 +62,4 @@ export default {
 
 <style  lang=scss>
   @import '../assets/Sass/main.scss';
-
 </style>
